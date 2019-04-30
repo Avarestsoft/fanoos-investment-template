@@ -1,0 +1,104 @@
+﻿@import "compass/reset";
+@import "compass/css3";
+@import "compass/support"; 
+@import "compass/utilities/sprites";
+/*******Global*******/
+* {
+  vertical-align: middle !important;
+}
+html {
+  line-height: inherit;
+}
+
+@mixin transition($property:all,$time:0.3s){
+  @include transition-property($property);
+  @include transition-duration($time);
+}
+
+@mixin placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+a{
+  @include transition;
+  img{
+    border: none;
+  }
+  &:hover,
+  &:focus{
+    text-decoration: none;
+    outline: 0;
+    box-shadow: none;
+  }
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus{
+  @include transition;
+  outline: none;
+}
+
+button:focus{
+  outline: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.clear {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+$Margin-col : 15px;
+.container-fluid{
+  padding: {
+    left: $Margin-col;
+    right: $Margin-col;
+  }
+  overflow: hidden;
+}
+.container{
+  padding: {
+    left: $Margin-col;
+    right: $Margin-col;
+  }
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  padding-left: $Margin-col;
+  padding-right: $Margin-col;
+}
+.row{
+  margin-left: -$Margin-col;
+  margin-right: -$Margin-col;
+}
+
+.sprite{
+  display: block;
+  content: "";
+}
+
+@import "icons/*.png";
+@include all-icons-sprites;
+
+
+/*******Media Query*******/
+$size1200: "only screen and (max-width : 1199px)";
+$size1024: "only screen and (max-width : 1024px)";
+$size992: "only screen and (max-width : 991px)"; 
+$size768: "only screen and (max-width : 767px)";
+$size736: "only screen and (max-width : 736px)";
+$size667: "only screen and (max-width : 667px)"; 
+$size568: "only screen and (max-width : 567px)"; 
+$size480: "only screen and (max-width : 480px)"; 
+$size414: "only screen and (max-width : 414px)"; 
+$size375: "only screen and (max-width : 375px)"; 
+$size360: "only screen and (max-width : 360px)"; 
+$size340: "only screen and (max-width : 340px)"; 
+$size320: "only screen and (max-width : 320px)";
