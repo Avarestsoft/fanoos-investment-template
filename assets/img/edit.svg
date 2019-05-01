@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27.503" height="27.502" viewBox="0 0 27.503 27.502">
+    <defs>
+        <style>
+            .cls-1{fill:none;stroke:#27ba89;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10}.cls-2{filter:url(#edit-pen)}
+        </style>
+        <filter id="edit-pen" width="27.503" height="27.502" x="0" y="0" filterUnits="userSpaceOnUse">
+            <feOffset dy="3"/>
+            <feGaussianBlur result="blur" stdDeviation="3"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g class="cls-2">
+        <path id="edit-pen-2" d="M.051 8.451L0 5.466l.311-.311L5.466 0 8.5 3.036 6.985 4.554 3.037 8.5z" class="cls-1" data-name="edit-pen" transform="translate(9.5 6.5)"/>
+    </g>
+</svg>

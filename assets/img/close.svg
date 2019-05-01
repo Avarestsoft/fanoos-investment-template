@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29">
+    <defs>
+        <style>
+            .cls-1{fill:#c73c3c}.cls-2{fill-rule:evenodd}
+        </style>
+    </defs>
+    <g id="Group_1396" data-name="Group 1396" transform="translate(-322 -576)">
+        <circle id="Ellipse_1128" cx="14.5" cy="14.5" r="14.5" class="cls-1" data-name="Ellipse 1128" transform="translate(322 576)"/>
+        <g id="cancel-music" transform="translate(329 583)">
+            <path id="Path_120" d="M9.283 7.5l5.348-5.348A1.261 1.261 0 0 0 12.848.369L7.5 5.717 2.152.369A1.261 1.261 0 0 0 .369 2.151L5.718 7.5.369 12.848a1.261 1.261 0 0 0 1.783 1.782L7.5 9.282l5.348 5.348a1.261 1.261 0 0 0 1.783-1.783z" class="cls-2" data-name="Path 120"/>
+        </g>
+    </g>
+</svg>
