@@ -151,6 +151,13 @@ img {
 /******** Colors **********/
 /********* Fonts **********/
 @font-face {
+  font-family: "Iransans_Black";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/eot/IRANSansWeb(FaNum)_Black.eot");
+  src: url("../fonts/eot/IRANSansWeb(FaNum)_Black.eot?#iefix") format("embedded-opentype"), url("../fonts/woff2/IRANSansWeb(FaNum)_Black.woff2") format("woff2"), url("../fonts/woff/IRANSansWeb(FaNum)_Black.woff") format("woff"), url("../fonts/ttf/IRANSansWeb(FaNum)_Black.ttf") format("truetype");
+}
+@font-face {
   font-family: "Iransans_Bold";
   font-style: normal;
   font-weight: 300;
@@ -417,6 +424,25 @@ form .row > div {
   font-size: 12px;
   font-family: "Iransans_Medium";
   color: #27ba89;
+}
+
+.top_section {
+  background-color: #fff;
+  padding: 4px 10px 2px 10px;
+}
+.top_section .top_section_btn {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.top_section .top_section_btn .setting {
+  margin-right: auto;
+}
+.top_section .top_section_title {
+  font-size: 28px;
+  color: #0f1211;
+  font-family: "Iransans_Black";
+  line-height: 32px;
 }
 
 /********* Mainarea ********/
@@ -885,4 +911,52 @@ form .row > div {
   padding: 0;
   opacity: 0;
   cursor: pointer;
+}
+
+/********* sangoq-Factor *********/
+.factor_sec ul li .f_body {
+  display: flex;
+}
+.factor_sec ul li .f_body .f_form {
+  width: 41.5%;
+}
+.factor_sec ul li .f_body .exchange {
+  width: 17%;
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-end;
+}
+.factor_sec ul li .f_body .exchange a {
+  display: block;
+  margin: 0 auto;
+}
+.factor_sec ul li .f_text {
+  text-align: center;
+}
+.factor_sec ul li .f_text p {
+  font-size: 13px;
+  color: #595959;
+  font-family: "Iransans_Medium";
+}
+.factor_sec ul li .f_text p i {
+  font-size: 14px;
+  font-style: normal;
+  color: #27ba89;
+}
+.factor_sec ul li .f_bank .bank_t {
+  margin-bottom: 26px;
+  font-family: "Iransans_Bold";
+  color: #595959;
+  font-size: 13px;
+}
+.factor_sec ul li .f_bank .bank_select {
+  display: flex;
+}
+.factor_sec ul li .f_bank .bank_select .checkbox {
+  width: 50%;
+}
+.factor_sec ul li .f_bank .bank_select .checkbox label {
+  font-size: 13px;
+  color: #595959;
 }

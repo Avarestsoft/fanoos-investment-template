@@ -10,6 +10,16 @@ $border: #ebeded;
 $border2: #F0F2F2;
 /********* Fonts **********/
 @font-face {
+  font-family: "Iransans_Black";
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/eot/IRANSansWeb(FaNum)_Black.eot');
+  src: url('../fonts/eot/IRANSansWeb(FaNum)_Black.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+     url('../fonts/woff2/IRANSansWeb(FaNum)_Black.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+     url('../fonts/woff/IRANSansWeb(FaNum)_Black.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+     url('../fonts/ttf/IRANSansWeb(FaNum)_Black.ttf') format('truetype');
+}
+@font-face {
   font-family: "Iransans_Bold";
   font-style: normal;
   font-weight: 300;
@@ -18,7 +28,7 @@ $border2: #F0F2F2;
      url('../fonts/woff2/IRANSansWeb(FaNum)_Bold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
      url('../fonts/woff/IRANSansWeb(FaNum)_Bold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
      url('../fonts/ttf/IRANSansWeb(FaNum)_Bold.ttf') format('truetype');
- }
+}
 @font-face {
   font-family: "Iransans";
   font-style: normal;
@@ -246,6 +256,24 @@ form{
   font-size: 12px;
   font-family: "Iransans_Medium";
   color: $c4;
+}
+.top_section{
+  background-color: $c2;
+  padding: 4px 10px 2px 10px;
+  .top_section_btn{
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    .setting{
+      margin-right: auto;
+    }
+  }
+  .top_section_title{
+    font-size: 28px;
+    color: #0f1211;
+    font-family: "Iransans_Black";
+    line-height: 32px;
+  }
 }
 /********* Mainarea ********/
 .mainarea{
@@ -699,6 +727,61 @@ form{
       padding: 0;
       opacity: 0;
       cursor: pointer;
+    }
+  }
+}
+/********* sangoq-Factor *********/
+.factor_sec{
+  ul{
+    li{
+      .f_body{
+        display: flex;
+        .f_form{
+          width: 41.5%;
+        }
+        .exchange{
+          width: 17%;
+          text-align: center;
+          margin-bottom: 20px;
+          display: flex;
+          align-items: flex-end;
+          a{
+            display: block;
+            margin: 0 auto;
+          }
+        }
+      }
+      .f_text{
+        text-align: center;
+        p{
+          font-size: 13px;
+          color: $c0;
+          font-family: "Iransans_Medium";
+          i{
+            font-size: 14px;
+            font-style: normal;
+            color: $c4;
+          }
+        }
+      }
+      .f_bank{
+        .bank_t{
+          margin-bottom: 26px;
+          font-family: "Iransans_Bold";
+          color: $c0;
+          font-size: 13px;
+        }
+        .bank_select{
+          display: flex;
+          .checkbox{
+            width: 50%;
+            label{
+              font-size: 13px;
+              color: $c0;
+            }
+          }
+        }
+      }
     }
   }
 }
