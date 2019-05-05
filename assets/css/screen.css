@@ -445,6 +445,66 @@ form .row > div {
   line-height: 32px;
 }
 
+label {
+  font-family: "Iransans_Bold";
+  color: #595959;
+  font-size: 13px;
+}
+
+.modal .modal-dialog {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.modal .modal-content {
+  border: none;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  -moz-box-shadow: 0, 4px, 8px, 0, rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0, 4px, 8px, 0, rgba(0, 0, 0, 0.2);
+  box-shadow: 0, 4px, 8px, 0, rgba(0, 0, 0, 0.2);
+}
+.modal .modal-body.mb2 {
+  padding: 0;
+}
+.modal .modal-body .modal_text {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.modal .modal-body .modal_text .slimScrollRail {
+  border: solid 1px #727d7d;
+}
+.modal .modal-body .modal_text ul {
+  padding-left: 9px;
+}
+.modal .modal-body .modal_text ul li {
+  padding: 12px 15px;
+  color: #595959;
+  font-size: 13px;
+  border-bottom: solid 1px #ebeded;
+}
+.modal .modal-body .modal_text ul li:first-child {
+  padding-top: 0;
+}
+.modal .modal-body .modal_text ul li .modal_text_title {
+  display: block;
+  margin-bottom: 10px;
+  font-family: "Iransans_Bold";
+}
+.modal .modal-body .confirmModal_text h3 {
+  font-family: "Iransans_Bold";
+  font-size: 20px;
+  color: #595959;
+  margin-bottom: 10px;
+}
+.modal .modal-body .confirmModal_text .confirmModal_txt {
+  margin-bottom: 20px;
+}
+.modal .modal-footer .modal-close {
+  width: 110px;
+  cursor: pointer;
+}
+
 /********* Mainarea ********/
 .mainarea {
   padding: 20px 0;
@@ -945,18 +1005,36 @@ form .row > div {
   color: #27ba89;
 }
 .factor_sec ul li .f_bank .bank_t {
-  margin-bottom: 26px;
+  margin-bottom: 20px;
   font-family: "Iransans_Bold";
-  color: #595959;
   font-size: 13px;
+  color: #595959;
 }
-.factor_sec ul li .f_bank .bank_select {
+.factor_sec ul li .f_bank .bank_select .radio_row {
   display: flex;
 }
-.factor_sec ul li .f_bank .bank_select .checkbox {
-  width: 50%;
-}
-.factor_sec ul li .f_bank .bank_select .checkbox label {
-  font-size: 13px;
+.factor_sec ul li .f_bank .bank_select .radio_row .md-radio label {
   color: #595959;
+  font-size: 13px;
+}
+.factor_sec ul li .f_bank .bank_select .radio_row .md-radio:nth-of-type(even) {
+  margin-right: auto;
+}
+.factor_sec ul li .bank_confirm {
+  margin-bottom: 25px;
+}
+.factor_sec ul li .bank_confirm .description_btn {
+  display: inline-block;
+  height: 25px;
+  line-height: 24px;
+  text-align: center;
+  color: #00bcd4;
+  font-family: "Iransans_Medium";
+  background-color: rgba(0, 188, 212, 0.1);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: solid 1px #00bcd4;
+  margin: 0 5px;
+  padding: 0 12px;
 }

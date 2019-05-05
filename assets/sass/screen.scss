@@ -275,6 +275,68 @@ form{
     line-height: 32px;
   }
 }
+label{
+  font-family: "Iransans_Bold";
+  color: $c0;
+  font-size: 13px;
+}
+.modal{
+  .modal-dialog{
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .modal-content{
+    border: none;
+    @include border-radius(15px);
+    @include box-shadow(0,4px,8px,0,rgba(0,0,0,.2));
+  }
+  .modal-body{
+    &.mb2{
+      padding: 0;
+    }
+    .modal_text{
+      margin-top: 12px;
+      margin-bottom: 12px;
+      .slimScrollRail{
+        border: solid 1px #727d7d;
+      }
+      ul{
+        padding-left: 9px;
+        li{
+          padding: 12px 15px;
+          color: $c0;
+          font-size: 13px;
+          border-bottom: solid 1px $border;
+          &:first-child{
+            padding-top: 0;
+          }
+          .modal_text_title{
+            display: block;
+            margin-bottom: 10px;
+            font-family: "Iransans_Bold";
+          }
+        }
+      }
+    }
+    .confirmModal_text{
+      h3{
+        font-family: "Iransans_Bold";
+        font-size: 20px;
+        color: $c0;
+        margin-bottom: 10px;
+      }
+      .confirmModal_txt{
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .modal-footer{
+    .modal-close{
+      width: 110px;
+      cursor: pointer;
+    }
+  }
+}
 /********* Mainarea ********/
 .mainarea{
   padding: 20px 0;
@@ -766,20 +828,40 @@ form{
       }
       .f_bank{
         .bank_t{
-          margin-bottom: 26px;
+          margin-bottom: 20px;
           font-family: "Iransans_Bold";
-          color: $c0;
           font-size: 13px;
+          color: $c0;
         }
         .bank_select{
-          display: flex;
-          .checkbox{
-            width: 50%;
-            label{
-              font-size: 13px;
-              color: $c0;
+          .radio_row{
+            display: flex;
+            .md-radio{
+              label{
+                color: $c0;
+                font-size: 13px;
+              }
+              &:nth-of-type(even){
+                margin-right: auto;
+              }
             }
           }
+        }
+      }
+      .bank_confirm{
+        margin-bottom: 25px;
+        .description_btn{
+          display: inline-block;
+          height: 25px;
+          line-height: 24px;
+          text-align: center;
+          color: #00bcd4;
+          font-family: "Iransans_Medium";
+          background-color: rgba(#00bcd4,0.1);
+          @include border-radius(5px);
+          border: solid 1px #00bcd4;
+          margin: 0 5px;
+          padding: 0 12px;
         }
       }
     }
