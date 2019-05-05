@@ -102,44 +102,30 @@
     <script type="text/javascript" src="assets/js/scripts.js"></script>
   <!-- JS Files -->
 
-  <div class="modal fade" tabindex="-1" role="dialog" id="descModal" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal fade" tabindex="-1" role="dialog" id="confirmModal" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm" role="document">
       <div class="modal-content">
-        <div class="modal-body mb2">
-          <div class="modal_text">
-            <ul class="list-unstyle modal_scroll">
-              <li>
-                <span class="modal_text_title">کارگذاری مهر ایرانیان</span>
-                <div class="modal_text_tt">
-                  <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p>
-                </div>
-              </li>
-              <li>
-                <span class="modal_text_title">صندوق سپرده‌گذاری سینا</span>
-                <div class="modal_text_tt">
-                  <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p>
-                </div>
-              </li>
-              <li>
-                <span class="modal_text_title">کارگذاری مهر ایرانیان</span>
-                <div class="modal_text_tt">
-                  <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p>
-                </div>
-              </li>
-              <li>
-                <span class="modal_text_title">صندوق سپرده‌گذاری سینا</span>
-                <div class="modal_text_tt">
-                  <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="modal-footer">
-            <a class="modal-close btn" data-dismiss="modal" aria-label="Close">بستن</a>
+        <div class="modal-body">
+          <div class="confirmModal_text">
+            <h3>از ابطال سهم اطمینان دارید؟</h3>
+            <div class="confirmModal_txt">
+              <p>بعد از ابطال شما ۱۲ واحد از سهم خود را از مالکیت خود خارج میکنید</p>
+            </div>
+            <div class="confirmModal_btn">
+              <div class="button_btn">
+                <button type="submit" class="btn btn-r">بررسی مجدد</button>
+                <button type="submit" class="btn btn-l btn-danger">ابطال سهم</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <script type="text/javascript">
+    $(window).on('load',function(){
+      $('#confirmModal').modal('show');
+    });
+  </script>
  </body>
 </html>
