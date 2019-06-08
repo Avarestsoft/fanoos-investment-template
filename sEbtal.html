@@ -26,21 +26,11 @@
           <div class="fund_detail factor_sec">
             <ul class="list-unstyle">
               <li>
-                <div class="f_body">
-                  <div class="form-group f_form">
+                <div class="f_body d-flex">
+                  <div class="form-group f_form mx-auto">
                     <div class="inp_border">
                       <input type="text" name="" class="form-control">
                       <i class="placeholder">تعداد واحد</i>
-                      <i class="line"></i>
-                    </div>
-                  </div>
-                  <div class="exchange">
-                    <a href="#"><img src="assets/img/exchange.svg"></a>
-                  </div>
-                  <div class="form-group f_form">
-                    <div class="inp_border">
-                      <input type="text" name="" class="form-control">
-                      <i class="placeholder">ارزش مبلغ (ریال)</i>
                       <i class="line"></i>
                     </div>
                   </div>
@@ -53,17 +43,26 @@
               </li>
               <li>
                 <div class="bank_confirm">
-                  <div class="checkbox">
+                  <!-- <div class="checkbox">
                     <label>
                       <input type="checkbox">
                       <span class="checkbox-material">
                       <span class="check"></span></span> 
                       <a href="#" class="description_btn" data-toggle="modal" data-target="#descModal">توضیحات صندوق</a> را مطالعه کرده‌ام
                     </label>
+                  </div> -->
+                  <div class="bank_confirm_text">
+                    <p>
+                      با زدن دکمه اتصال به درگاه قبول میکنم که
+                      <a href="#" data-toggle="modal" data-target="#descModal">
+                        <i>توضیحات صندوق</i>
+                      </a>
+                      و <i>شرایط احراز هویت</i> را مطالعه کرده ام.
+                    </p>
                   </div>
                 </div>
                 <div class="button_btn">
-                  <button type="submit" class="btn btn-r">لغو</button>
+                  <button type="submit" class="btn btn-r btn-gray">لغو</button>
                   <button type="submit" class="btn btn-l btn-danger">ابطال سهم</button>
                 </div>
               </li>

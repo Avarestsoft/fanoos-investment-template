@@ -156,6 +156,31 @@ body{
       font-size: 11px;
     }
   }
+  &.inp_password{
+    position: relative;
+    .pass_ic{
+      height: 40px;
+      line-height: 40px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 100;
+      .visible_ic{
+        display: none;
+      }
+      .invisible_ic{
+        display: inline-block;
+      }
+      &.hidd{
+        .visible_ic{
+          display: inline-block;
+        }
+        .invisible_ic{
+          display: none;
+        }
+      }
+    }
+  }
 }
 .btn{
   width: 100%;
@@ -168,12 +193,27 @@ body{
   font-size: 16px;
   padding: 0 10px 3px 10px;
   font-family: "Iransans_Medium";
+  @media #{$size375}{
+    font-size: 15px;
+  }
+  @media #{$size320}{
+    font-size: 14px;
+    height: 40px;
+    line-height: 36px;
+  }
+  &:hover{
+    color: $c1;
+  }
   &:focus{
     @include box-shadow(none);
   }
   &.btn-danger{
     background-color: #e10000;
     border-color: #e10000;
+  }
+  &.btn-gray{
+    background-color: #d8dada;
+    color: $c0;
   }
 }
 .register_txt{
@@ -190,8 +230,15 @@ body{
       font-size: 12px;
     }
     a{
+      display: inline-block;
+      height: 25px;
+      line-height: 24px;
       color: $c3;
-      border-bottom: solid 1px $c3;
+      border: solid 1px $c3;
+      @include border-radius(5px);
+      padding: 0 8px;
+      margin: 0 5px;
+      background-color: rgba($c4,0.15);
     }
   }
 }
@@ -256,6 +303,10 @@ form{
   font-size: 12px;
   font-family: "Iransans_Medium";
   color: $c4;
+  border-bottom: dotted 1px $c4;
+  &:hover{
+    color: $c4;
+  }
 }
 .top_section{
   background-color: $c2;
@@ -282,8 +333,8 @@ label{
 }
 .modal{
   .modal-dialog{
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   .modal-content{
     border: none;
@@ -337,6 +388,12 @@ label{
     }
   }
 }
+.back{
+  @include box-shadow(0,4px,8px,rgba(15,18,17,0.8));
+  background-color: $c2;
+  @include border-radius(5px);
+  overflow: hidden;
+}
 /********* Mainarea ********/
 .mainarea{
   padding: 20px 0;
@@ -347,7 +404,7 @@ label{
   position: relative;
   @include box-shadow(0,4px,8px,rgba(15,18,17,.8));
   .box_top{
-    padding: 25px 10px;
+    padding: 15px 10px;
     border-bottom: solid 1px $border2;
     overflow: hidden;
     position: relative;
@@ -360,6 +417,13 @@ label{
       color: $c0;
       img{
         margin-left: 5px;
+      }
+    }
+    .box_top_txt{
+      margin-top: 10px;
+      p{
+        font-size: 13px;
+        color: $c0;
       }
     }
     .box_photo{
@@ -383,7 +447,7 @@ label{
     .see{
       font-family: "Iransans_Bold";
       font-size: 13px;
-      color: #0f1211;
+      color: $c4;
       img{
         margin-right: 4px;
       }
@@ -391,42 +455,118 @@ label{
   }
 }
 /******* sandoqha-detail *******/
+// .swiper{
+//   .swiper_header{
+//     overflow-x: auto;
+//     .nav-tabs{
+//       display: -webkit-flex;
+//       display: flex;
+//       width: 100%;
+//       @media #{$size375}{
+//         width: 460px;
+//       }
+//       a{
+//         display: block;
+//         font-size: 14px;
+//         color: $c1;
+//         padding: 10px 0 5px 0;
+//         text-align: center;
+//         border-bottom: solid 1px #d8dada;
+//         width: 23.5%;
+//         @media #{$size375}{
+//           font-size: 12px;
+//         }
+//         &.is-active{
+//           color: $c3;
+//           border-color: $c3;
+//           -webkit-background-image: linear-gradient(#ffffff 0%, #dafbf0 100%);
+//           -moz-background-image: linear-gradient(#ffffff 0%, #dafbf0 100%);
+//           -o-background-image: linear-gradient(#ffffff 0%, #dafbf0 100%);
+//           background-image: linear-gradient(#ffffff 0%, #dafbf0 100%);
+//         }
+//       }
+//     }
+//   }
+//   .swiper_body{
+//     padding-top: 20px;
+//   }
+// }
 .box_tab{
-  .nav-tabs{
-    display: -webkit-flex;
-    display: flex;
-    li{
-      flex: 1 0 0;
-      a{
-        display: block;
-        font-size: 14px;
-        color: #a5adad;
-        padding: 10px 0 5px 0;
-        text-align: center;
-        border-bottom: solid 1px #d8dada;
-        @media #{$size375}{
-          font-size: 12px;
-        }
-        &.active{
-          color: $c3;
-          border-color: $c3;
-          -webkit-background-image: linear-gradient(#ffffff 0%, #dafbf0 100%);
-          -moz-background-image: linear-gradient(#ffffff 0%, #dafbf0 100%);
-          -o-background-image: linear-gradient(#ffffff 0%, #dafbf0 100%);
-          background-image: linear-gradient(#ffffff 0%, #dafbf0 100%);
+  .box_tab_t{
+    overflow-x: auto;
+    .nav-tabs{
+      display: -webkit-flex;
+      display: flex;
+      width: 100%;
+      @media #{$size568}{
+        width: 580px;
+      }
+      @media #{$size480}{
+        width: 520px;
+      }
+      @media #{$size414}{
+        width: 460px;
+      }
+      @media #{$size375}{
+        width: 415px;
+      }
+      @media #{$size340}{
+        width: 380px;
+      }
+      @media #{$size320}{
+        width: 360px;
+      }
+      li{
+        flex: 1 0 0;
+        a{
+          display: block;
+          font-size: 14px;
+          color: #a5adad;
+          padding: 10px 0 5px 0;
+          text-align: center;
+          border-bottom: solid 1px #d8dada;
+          @media #{$size375}{
+            font-size: 12px;
+          }
+          &.active{
+            color: $c3;
+            border-color: $c3;
+            -webkit-background-image: linear-gradient(#ffffff 0%, #dafbf0 100%);
+            -moz-background-image: linear-gradient(#ffffff 0%, #dafbf0 100%);
+            -o-background-image: linear-gradient(#ffffff 0%, #dafbf0 100%);
+            background-image: linear-gradient(#ffffff 0%, #dafbf0 100%);
+          }
         }
       }
     }
   }
+  
   .tab-content{
     padding-top: 20px;
   }
 }
-.back{
-  @include box-shadow(0,4px,8px,rgba(15,18,17,0.8));
-  background-color: $c2;
-  @include border-radius(5px);
-  overflow: hidden;
+.fund_top{
+  padding: 20px 15px;
+  h3{
+    font-size: 13px;
+    font-family: "Iransans_Bold";
+    color: $c0;
+    margin-bottom: 15px;
+  }
+  .fund_top_li{
+    ul{
+      justify-content: space-between;
+      li{
+        width: calc(50% - 7.5px);
+        a{
+          display: block;
+          @media #{$size375}{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
 }
 .fund_detail{
   >ul{
@@ -564,10 +704,13 @@ label{
   font-size: 12px;
   color: $c3;
   @include border-radius(5px);
-  background-color: rgba(#27BA89,.1);
+  background-color: rgba($c4,.1);
   border: solid 1px $c3;
   img{
     margin-left: 3px;
+  }
+  &:hover{
+    color: $c3;
   }
 }
 .divider2{
@@ -604,8 +747,6 @@ label{
 .fund_modal_error{
   background-color: #f07f7f;
   padding: 12px 15px;
-  display: flex;
-  align-items: center;
   @media #{$size375}{
     padding: 12px 10px;
   }
@@ -620,10 +761,33 @@ label{
       font-size: 13px;
     }
   }
+  .fund_modal_time{
+    p{
+      text-align: center;
+      i{
+        font-family: "Iransans_Bold";
+        font-style: normal;
+      }
+    }
+  }
   &.error2{
     background-color: #ffd97f;
   }
 }
+/********** sandoqha-tryAgain **********/
+.send_again{
+  font-family: "Iransans_Medium";
+  border: solid 1px $c1;
+  @include border-radius(5px);
+  background-color: #ccb374;
+  height: 25px;
+  line-height: 24px;
+  padding: 0 12px;
+  color: $c1;
+  font-size: 12px;
+}
+/********** sandoqha-tryAgain **********/
+
 /********** sandoqha-signup **********/
 .register_form{
   .inp_border{
@@ -792,7 +956,7 @@ label{
     }
   }
 }
-/********* sangoq-Factor *********/
+/********* sandoq-Factor *********/
 .factor_sec{
   ul{
     li{
@@ -800,6 +964,14 @@ label{
         display: flex;
         .f_form{
           width: 41.5%;
+          &.f_form2{
+            input{
+              text-align: center;
+              @include placeholder {
+                text-align: center;
+              }
+            }
+          }
         }
         .exchange{
           width: 17%;
@@ -862,6 +1034,22 @@ label{
           border: solid 1px #00bcd4;
           margin: 0 5px;
           padding: 0 12px;
+        }
+        .bank_confirm_text{
+          p{
+            font-size: 13px;
+            font-family: "Iransans_Bold";
+            color: $c0;
+            text-align: center;
+            line-height: 21px;
+            i{
+              font-style: normal;
+              color: #00bcd4;
+            }
+            a{
+              border-bottom: dotted 2px #00bcd4;
+            }
+          }
         }
       }
     }

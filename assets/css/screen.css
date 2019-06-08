@@ -310,6 +310,29 @@ body {
   z-index: 2;
   font-size: 11px;
 }
+.inp_border.inp_password {
+  position: relative;
+}
+.inp_border.inp_password .pass_ic {
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+.inp_border.inp_password .pass_ic .visible_ic {
+  display: none;
+}
+.inp_border.inp_password .pass_ic .invisible_ic {
+  display: inline-block;
+}
+.inp_border.inp_password .pass_ic.hidd .visible_ic {
+  display: inline-block;
+}
+.inp_border.inp_password .pass_ic.hidd .invisible_ic {
+  display: none;
+}
 
 .btn {
   width: 100%;
@@ -327,6 +350,21 @@ body {
   padding: 0 10px 3px 10px;
   font-family: "Iransans_Medium";
 }
+@media only screen and (max-width: 375px) {
+  .btn {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .btn {
+    font-size: 14px;
+    height: 40px;
+    line-height: 36px;
+  }
+}
+.btn:hover {
+  color: #000;
+}
 .btn:focus {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
@@ -335,6 +373,10 @@ body {
 .btn.btn-danger {
   background-color: #e10000;
   border-color: #e10000;
+}
+.btn.btn-gray {
+  background-color: #d8dada;
+  color: #595959;
 }
 
 .register_txt {
@@ -357,8 +399,17 @@ body {
   }
 }
 .register_txt p a {
+  display: inline-block;
+  height: 25px;
+  line-height: 24px;
   color: #20ce70;
-  border-bottom: solid 1px #20ce70;
+  border: solid 1px #20ce70;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 0 8px;
+  margin: 0 5px;
+  background-color: rgba(39, 186, 137, 0.15);
 }
 
 form .row {
@@ -424,6 +475,10 @@ form .row > div {
   font-size: 12px;
   font-family: "Iransans_Medium";
   color: #27ba89;
+  border-bottom: dotted 1px #27ba89;
+}
+.forget_pass:hover {
+  color: #27ba89;
 }
 
 .top_section {
@@ -452,8 +507,8 @@ label {
 }
 
 .modal .modal-dialog {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .modal .modal-content {
   border: none;
@@ -505,6 +560,17 @@ label {
   cursor: pointer;
 }
 
+.back {
+  -moz-box-shadow: 0, 4px, 8px, rgba(15, 18, 17, 0.8);
+  -webkit-box-shadow: 0, 4px, 8px, rgba(15, 18, 17, 0.8);
+  box-shadow: 0, 4px, 8px, rgba(15, 18, 17, 0.8);
+  background-color: #fff;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
 /********* Mainarea ********/
 .mainarea {
   padding: 20px 0;
@@ -519,7 +585,7 @@ label {
   box-shadow: 0, 4px, 8px, rgba(15, 18, 17, 0.8);
 }
 .box .box_top {
-  padding: 25px 10px;
+  padding: 15px 10px;
   border-bottom: solid 1px #F0F2F2;
   overflow: hidden;
   position: relative;
@@ -536,6 +602,13 @@ label {
 }
 .box .box_top .box_top_t img {
   margin-left: 5px;
+}
+.box .box_top .box_top_txt {
+  margin-top: 10px;
+}
+.box .box_top .box_top_txt p {
+  font-size: 13px;
+  color: #595959;
 }
 .box .box_top .box_photo {
   position: absolute;
@@ -560,21 +633,55 @@ label {
 .box .box_bottom .see {
   font-family: "Iransans_Bold";
   font-size: 13px;
-  color: #0f1211;
+  color: #27ba89;
 }
 .box .box_bottom .see img {
   margin-right: 4px;
 }
 
 /******* sandoqha-detail *******/
-.box_tab .nav-tabs {
+.box_tab .box_tab_t {
+  overflow-x: auto;
+}
+.box_tab .box_tab_t .nav-tabs {
   display: -webkit-flex;
   display: flex;
+  width: 100%;
 }
-.box_tab .nav-tabs li {
+@media only screen and (max-width: 567px) {
+  .box_tab .box_tab_t .nav-tabs {
+    width: 580px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .box_tab .box_tab_t .nav-tabs {
+    width: 520px;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .box_tab .box_tab_t .nav-tabs {
+    width: 460px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .box_tab .box_tab_t .nav-tabs {
+    width: 415px;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .box_tab .box_tab_t .nav-tabs {
+    width: 380px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .box_tab .box_tab_t .nav-tabs {
+    width: 360px;
+  }
+}
+.box_tab .box_tab_t .nav-tabs li {
   flex: 1 0 0;
 }
-.box_tab .nav-tabs li a {
+.box_tab .box_tab_t .nav-tabs li a {
   display: block;
   font-size: 14px;
   color: #a5adad;
@@ -583,11 +690,11 @@ label {
   border-bottom: solid 1px #d8dada;
 }
 @media only screen and (max-width: 375px) {
-  .box_tab .nav-tabs li a {
+  .box_tab .box_tab_t .nav-tabs li a {
     font-size: 12px;
   }
 }
-.box_tab .nav-tabs li a.active {
+.box_tab .box_tab_t .nav-tabs li a.active {
   color: #20ce70;
   border-color: #20ce70;
   -webkit-background-image: linear-gradient(#ffffff 0%, #dafbf0 100%);
@@ -599,15 +706,28 @@ label {
   padding-top: 20px;
 }
 
-.back {
-  -moz-box-shadow: 0, 4px, 8px, rgba(15, 18, 17, 0.8);
-  -webkit-box-shadow: 0, 4px, 8px, rgba(15, 18, 17, 0.8);
-  box-shadow: 0, 4px, 8px, rgba(15, 18, 17, 0.8);
-  background-color: #fff;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  overflow: hidden;
+.fund_top {
+  padding: 20px 15px;
+}
+.fund_top h3 {
+  font-size: 13px;
+  font-family: "Iransans_Bold";
+  color: #595959;
+  margin-bottom: 15px;
+}
+.fund_top .fund_top_li ul {
+  justify-content: space-between;
+}
+.fund_top .fund_top_li ul li {
+  width: calc(50% - 7.5px);
+}
+.fund_top .fund_top_li ul li a {
+  display: block;
+}
+@media only screen and (max-width: 375px) {
+  .fund_top .fund_top_li ul li a {
+    font-size: 14px;
+  }
 }
 
 .fund_detail > ul > li {
@@ -665,7 +785,6 @@ label {
   color: #595959;
   text-align: center;
 }
-
 .fund_detail > ul > li .info_list > ul > li {
   display: flex;
   justify-content: space-between;
@@ -741,6 +860,9 @@ label {
 .edit_btn img {
   margin-left: 3px;
 }
+.edit_btn:hover {
+  color: #20ce70;
+}
 
 .divider2 {
   width: 60%;
@@ -778,8 +900,6 @@ label {
 .fund_modal_error {
   background-color: #f07f7f;
   padding: 12px 15px;
-  display: flex;
-  align-items: center;
 }
 @media only screen and (max-width: 375px) {
   .fund_modal_error {
@@ -799,10 +919,33 @@ label {
     font-size: 13px;
   }
 }
+.fund_modal_error .fund_modal_time p {
+  text-align: center;
+}
+.fund_modal_error .fund_modal_time p i {
+  font-family: "Iransans_Bold";
+  font-style: normal;
+}
 .fund_modal_error.error2 {
   background-color: #ffd97f;
 }
 
+/********** sandoqha-tryAgain **********/
+.send_again {
+  font-family: "Iransans_Medium";
+  border: solid 1px #000;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #ccb374;
+  height: 25px;
+  line-height: 24px;
+  padding: 0 12px;
+  color: #000;
+  font-size: 12px;
+}
+
+/********** sandoqha-tryAgain **********/
 /********** sandoqha-signup **********/
 .register_form .inp_border .form-control {
   padding-right: 30px;
@@ -974,12 +1117,27 @@ label {
   cursor: pointer;
 }
 
-/********* sangoq-Factor *********/
+/********* sandoq-Factor *********/
 .factor_sec ul li .f_body {
   display: flex;
 }
 .factor_sec ul li .f_body .f_form {
   width: 41.5%;
+}
+.factor_sec ul li .f_body .f_form.f_form2 input {
+  text-align: center;
+}
+.factor_sec ul li .f_body .f_form.f_form2 input.placeholder {
+  text-align: center;
+}
+.factor_sec ul li .f_body .f_form.f_form2 input:-moz-placeholder {
+  text-align: center;
+}
+.factor_sec ul li .f_body .f_form.f_form2 input::-moz-placeholder {
+  text-align: center;
+}
+.factor_sec ul li .f_body .f_form.f_form2 input::-webkit-input-placeholder {
+  text-align: center;
 }
 .factor_sec ul li .f_body .exchange {
   width: 17%;
@@ -1038,4 +1196,18 @@ label {
   border: solid 1px #00bcd4;
   margin: 0 5px;
   padding: 0 12px;
+}
+.factor_sec ul li .bank_confirm .bank_confirm_text p {
+  font-size: 13px;
+  font-family: "Iransans_Bold";
+  color: #595959;
+  text-align: center;
+  line-height: 21px;
+}
+.factor_sec ul li .bank_confirm .bank_confirm_text p i {
+  font-style: normal;
+  color: #00bcd4;
+}
+.factor_sec ul li .bank_confirm .bank_confirm_text p a {
+  border-bottom: dotted 2px #00bcd4;
 }

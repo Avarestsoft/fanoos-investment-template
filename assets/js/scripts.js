@@ -30,3 +30,18 @@ $(document).ready(function() {
       touchScrollStep :75
   });
 });
+
+$(document).ready(function() {
+  $(".pass_ic").click(function(){
+    if ($(this).hasClass('hidd')) {
+      $(this).removeClass('hidd');
+      $(this).addClass('show');
+      $(this).parent().children('.form-control').attr('type','text');
+    }
+    else{
+      $(this).removeClass('show');
+      $(this).addClass('hidd');
+      $(this).parent().children('.form-control').attr('type','password');
+    }
+  });
+});
