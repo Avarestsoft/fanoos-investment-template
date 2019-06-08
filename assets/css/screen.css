@@ -665,6 +665,7 @@ label {
   color: #595959;
   text-align: center;
 }
+
 .fund_detail > ul > li .info_list > ul > li {
   display: flex;
   justify-content: space-between;
